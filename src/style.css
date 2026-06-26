@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark mode global overrides (fallback for components without dark: classes) */
+.dark body {
+  background-color: #0b1220;
+  color: #e5e7eb;
+}
+
+/* Common utility overrides */
+.dark .bg-white { background-color: #0f1724 !important; }
+.dark .text-gray-700 { color: #e5e7eb !important; }
+.dark .text-gray-900 { color: #f8fafc !important; }
+.dark .bg-gray-50 { background-color: #071027 !important; }
+.dark .bg-gray-900 { background-color: #020617 !important; }
+.dark .border-gray-200 { border-color: #374151 !important; }
+.dark .hover\:bg-gray-50:hover { background-color: #0b1220 !important; }
+.dark .hover\:bg-gray-800:hover { background-color: #051025 !important; }
+.dark .bg-gray-200 { background-color: #1f2937 !important; }
+.dark .text-gray-500 { color: #9ca3af !important; }
+.dark .text-gray-600 { color: #9ca3af !important; }
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
