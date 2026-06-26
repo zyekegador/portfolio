@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './style.css'
 
@@ -16,11 +16,21 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior() {
     return { top: 0 }
   },
 })
+
+const redirectPath = new URLSearchParams(window.location.search).get('redirect')
+if (redirectPath) {
+  const decoded = decodeURIComponent(redirectPath)
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+  const path = decoded.startsWith(base)
+    ? decoded.slice(base.length) || '/'
+    : decoded
+  router.replace(path || '/')
+}
 
 createApp(App).use(router).mount('#app')
