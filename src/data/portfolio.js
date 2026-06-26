@@ -1,5 +1,7 @@
 // ── Portfolio Data ──────────────────────────────────────────────
 
+const base = import.meta.env.BASE_URL;
+
 export const profile = {
   name: "Zyeke Gador",
   verified: true,
@@ -82,7 +84,7 @@ export const projects = [
     title: "RBI Information Management System",
     description:
       "A secure and centralized platform for managing resident profiles, household data, and barangay records of Barangay Golden Ribbon.",
-    image: "/projects/rbiims.jpg",
+    image: `${base}projects/rbiims.jpg`,
     bgColor: "#1e40af",
     link: "zyekegador.github.io/RBIIMS/",
     caseStudy: false,
@@ -93,7 +95,7 @@ export const projects = [
     title: "RVC PetCare",
     description:
       "Mobile pet clinic application featuring pet service browsing, clinic booking, pet categorization, and user management. Complete UI/UX design with intuitive navigation and modern interface.",
-    image: "/projects/rvcpetcare.jpg",
+    image: `${base}projects/rvcpetcare.jpg`,
     bgColor: "#FF8C42",
     link: null,
     caseStudy: true,
@@ -106,79 +108,79 @@ export const certifications = [
     id: 1,
     title: "Cybersecurity Framework",
     year: "2026",
-    image: "/certificates/cert1.jpg",
+    image: `${base}certificates/cert1.jpg`,
   },
   {
     id: 2,
     title: "PAGSANYOG 2025: Pre-incubation Workshop",
     year: "2025",
-    image: "/certificates/cert2.jpg",
+    image: `${base}certificates/cert2.jpg`,
   },
   {
     id: 3,
     title: "Design Prompts for Everyday Work Tasks",
     year: "2026",
-    image: "/certificates/cert3.jpg",
+    image: `${base}certificates/cert3.jpg`,
   },
   {
     id: 4,
     title: "Foundations of User Experience (UX) Design",
     year: "2026",
-    image: "/certificates/cert4.jpg",
+    image: `${base}certificates/cert4.jpg`,
   },
   {
     id: 5,
     title: "Accelerate Your Job Search with AI",
     year: "2026",
-    image: "/certificates/cert5.jpg",
+    image: `${base}certificates/cert5.jpg`,
   },
   {
     id: 6,
     title: "Start Writing Prompts like a Pro",
     year: "2026",
-    image: "/certificates/cert6.jpg",
+    image: `${base}certificates/cert6.jpg`,
   },
   {
     id: 7,
     title: "PAGSANYOG 2025: Startup Pitching and Showcase",
     year: "2025",
-    image: "/certificates/cert7.jpg",
+    image: `${base}certificates/cert7.jpg`,
   },
   {
     id: 8,
     title: "Digital Citizenship",
     year: "2025",
-    image: "/certificates/cert8.jpg",
+    image: `${base}certificates/cert8.jpg`,
   },
   {
     id: 9,
     title: "ICT Project Management",
     year: "2025",
-    image: "/certificates/cert9.jpg",
+    image: `${base}certificates/cert9.jpg`,
   },
   {
     id: 10,
     title: "Basic Level of Software Engineering",
     year: null,
-    image: "/certificates/cert10.jpg",
+    image: `${base}certificates/cert10.jpg`,
   },
   {
     id: 11,
     title: "Introduction to JavaScript",
     year: null,
-    image: "/certificates/cert11.jpg",
+    image: `${base}certificates/cert11.jpg`,
   },
   {
     id: 12,
     title: "Introduction to HTML",
     year: null,
-    image: "/certificates/cert12.jpg",
+    image: `${base}certificates/cert12.jpg`,
   },
   {
     id: 13,
     title: "Introduction to CSS",
     year: null,
-    image: "/certificates/cert13.jpg",
+    image: `${base}certificates/cert13.jpg`,
   },
 ];
 
@@ -196,11 +198,11 @@ export const recommendations = [
 ];
 
 export const beyondImages = [
-  { alt: "Activity 1", image: "/Life/life1.jpg" },
-  { alt: "Activity 2", image: "/Life/life2.jpg" },
-  { alt: "Activity 3", image: "/Life/life3.jpg" },
-  { alt: "Activity 4", image: "/Life/life4.jpg" },
-  { alt: "Activity 5", image: "/Life/life5.JPG" },
-  { alt: "Activity 6", image: "/Life/life6.JPG" },
-  { alt: "Activity 7", image: "/Life/life7.JPG" },
+  { alt: "Activity 1", image: `${base}Life/life1.jpg` },
+  { alt: "Activity 2", image: `${base}Life/life2.jpg` },
+  { alt: "Activity 3", image: `${base}Life/life3.jpg` },
+  { alt: "Activity 4", image: `${base}Life/life4.jpg` },
+  { alt: "Activity 5", image: `${base}Life/life5.JPG` },
+  { alt: "Activity 6", image: `${base}Life/life6.JPG` },
+  { alt: "Activity 7", image: `${base}Life/life7.JPG` },
 ];

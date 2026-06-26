@@ -5,12 +5,12 @@
     >
       <div class="relative w-full h-full">
         <img
-          src="/pic1.png"
+          :src="`${base}pic1.png`"
           :alt="`${profile.name} profile photo`"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
         />
         <img
-          src="/pic2.png"
+          :src="`${base}pic2.png`"
           :alt="`${profile.name} profile photo alternate`"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         />
@@ -29,7 +29,7 @@
             class="flex items-center justify-center flex-shrink-0 ml-0.5"
           >
             <img
-              src="/verified.png"
+              :src="`${base}verified.png`"
               alt="Verified"
               class="w-5 h-5 sm:w-6 sm:h-6 object-contain -mt-0.5"
             />
@@ -73,7 +73,7 @@
 
         <!-- Download Resume -->
         <a
-          href="/Resume_ZyekeAiraGador.pdf"
+          :href="`${base}Resume_ZyekeAiraGador.pdf`"
           download="Resume_ZyekeAiraGador.pdf"
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition active:scale-95 active:bg-gray-100 dark:active:bg-gray-600"
         >
@@ -95,6 +95,8 @@ import {
   DownloadIcon,
 } from "lucide-vue-next";
 import { profile } from "../data/portfolio.js";
+
+const base = import.meta.env.BASE_URL;
 
 const gmailCompose = computed(
   () =>
