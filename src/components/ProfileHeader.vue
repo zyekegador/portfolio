@@ -74,7 +74,7 @@
         <!-- Download Resume -->
         <a
           :href="resumeHref"
-          :download="resumeFileName"
+          @click.prevent="downloadResume"
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition active:scale-95 active:bg-gray-100 dark:active:bg-gray-600"
         >
           <DownloadIcon class="w-4 h-4" />
@@ -98,7 +98,18 @@ import { profile } from "../data/portfolio.js";
 
 const base = import.meta.env.BASE_URL;
 const resumeFileName = "Gador_Zyeke_Aira_CV.pdf";
-const resumeHref = computed(() => `${base}${resumeFileName}?v=20260629`);
+const resumeHref = computed(() => `${base}${resumeFileName}`);
+
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = `${resumeHref.value}?t=${Date.now()}`;
+  link.download = resumeFileName;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 const gmailCompose = computed(
   () =>
