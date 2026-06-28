@@ -97,7 +97,7 @@ import {
 import { profile } from "../data/portfolio.js";
 
 const base = import.meta.env.BASE_URL;
-const resumeFileName = "Resume_ZyekeAiraGador_20260629.pdf";
+const resumeFileName = "Gador_Zyeke_Aira_CV.pdf";
 const resumeHref = computed(() => `${base}${resumeFileName}?v=20260629`);
 
 const gmailCompose = computed(
