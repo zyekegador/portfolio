@@ -73,8 +73,8 @@
 
         <!-- Download Resume -->
         <a
-          :href="`${base}Resume_ZyekeAiraGador.pdf`"
-          download="Resume_ZyekeAiraGador.pdf"
+          :href="`${base}${resumeFileName}`"
+          :download="resumeFileName"
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition active:scale-95 active:bg-gray-100 dark:active:bg-gray-600"
         >
           <DownloadIcon class="w-4 h-4" />
@@ -97,6 +97,7 @@ import {
 import { profile } from "../data/portfolio.js";
 
 const base = import.meta.env.BASE_URL;
+const resumeFileName = "Resume_ZyekeAiraGador_2026.pdf";
 
 const gmailCompose = computed(
   () =>
